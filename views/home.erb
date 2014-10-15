@@ -1,0 +1,29 @@
+<div class='container'>
+       <div class='row'>
+        <div class='col-xs-12 formRad'>
+<section id="add">
+<form action ="/" method="post">
+    
+    <textarea class="form-control" rows="9" name="content" placeholder="Your note&hellip;"></textarea>
+    <input type="submit" value=" Submit Your Rad">
+    </form>
+</section>
+           </div>
+    </div>
+</div>
+<%# Displays info once submitted %>
+<% @notes.each do |note| %>
+  <article <%= 'class="complete"' if note.complete %>>
+    <p>
+         <%# Displays lightingbolt for complete %>
+      <%= note.content %>
+      <span><a href="/<%= note.id %>">[edit]</a></span>
+    </p>
+    <p class="links">
+        <%# Displays lightingbolt for complete %>
+      <a href="/<%= note.id %>/complete">&#8623;</a>
+    </p>
+         <%# Displays when the note was created %>
+    <p class="meta">Created: <%= note.created_at %></p>
+  </article>
+<% end %>

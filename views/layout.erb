@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+        <!---responsive---->
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+  <title><%= @title + ' | Radiation' %></title>
+  <link href="/reset.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+    <link href="/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class='container'>
+       <div class='row'>
+        <div class='col-xs-12 mainRad'>
+  <header>
+    <hgroup>
+      <h1><a href="/">Radiation</a></h1>
+      <h2>What is it?</h2>
+    </hgroup>
+  </header>
+           </div>
+        </div>
+    <div class="jumbotron">
+  <div class="container">
+    <p>Welcome to my blog about Radiation. In this blog we will discuss what is radiation? How to be safe and protect yourself from it. What every day items have radiation in them, and the histroy of radiation</p>
+  </div>
+</div>
+  <div id="main">
+    <%= yield %>
+  </div>
+ 
+  <footer>
+    <p><small>A<sup>2</sup> Creations</small></p>
+  </footer>
+    </div>    
+       
+</body>
+</html>
